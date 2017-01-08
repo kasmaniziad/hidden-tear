@@ -1,0 +1,24 @@
+﻿<style>
+    .modal {
+        top: 20% !important;
+    }
+
+    .modal-dialog {
+        width: 400px;
+        height: 200px;
+    }
+
+    .greencolor{
+        color:green !important;
+    }
+
+    .redcolor{
+        color:red !important;
+    }
+
+</style>
+<div>
+    <div style="padding:33px;text-align:center;">
+        <label style="font-size:19px;"><i ng-class="{'fa fa-check greencolor': status == 1, 'fa fa-remove redcolor': status == 2 }">&nbsp;</i>{{message}} </label>
+    </div>
+</div>

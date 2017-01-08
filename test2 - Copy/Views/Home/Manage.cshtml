@@ -1,0 +1,64 @@
+﻿<div class="row s4-notdlg" style="margin-top:8px;">
+    <div class="col-md-12">
+        <div id="WOQOD-PageTitle">
+            <h1 style="padding-bottom:10px;">
+                Place Order
+            </h1>
+        </div>
+    </div>
+</div>
+<div class="row" ng-init="onInit(@Newtonsoft.Json.JsonConvert.SerializeObject(Model.Item1), @Newtonsoft.Json.JsonConvert.SerializeObject(Model.Item2))">
+    <div class="col-md-12">
+
+        <div class="main-slider" style="width:290px;">
+
+            <div class="slidetextlogin" ng-hide="forgotPassword">
+                <div class="contact-form bottom" cg-busy="{promise:myPromise,message:customMessage,backdrop:false,templateUrl:'WaitTemplate',minDuration:700}">
+                    <form id="main-contact-form" ng-submit="placeOrder()" ng-show="newOrder">
+                        <div class="form-group">
+                            Sites :
+                            <select class="form-control" data-ng-options="site as site.SiteName for site in lstSites" ng-change="refreshProducts(formData.Site.SiteNumber)" data-ng-model="formData.Site" required>
+                                <option value="">Select Site</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            Product :
+                            <select class="form-control" data-ng-options="product as product.ProductName for product in lstProducts" data-ng-model="formData.Product" required>
+                                <option value="">Select Product</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            Quantity : <input type="text" name="name" style="text-align:right;" class="form-control" ng-model="formData.Quantity" required="required" placeholder="Quantity">
+                        </div>
+                        <div class="form-group">
+                            Required On :
+                            <div class="input-group date">
+                                <input type="datetime" class="form-control myclass" min-date="minDate" placeholder="Required On" is-open="requiredOnOpen" show-button-bar="false" datepicker-popup="dd/MM/yyyy" ng-model="formData.RequiredOn" ng-click="requiredOnOpen=true" auto-close="false" required />
+                                <span class="input-group-addon" ng-click="requiredOnOpen=true;$event.stopPropagation();"><i class="fa fa-calendar"></i></span>
+                            </div>
+                            <div style="color:red;" ng-show="dateError">*Please select a valid date!! </div>
+                        </div>
+                        <div class="form-group">
+                            Shift :
+                            <select class="form-control" data-ng-options="site as site.ShiftName for site in lstShifts" data-ng-model="formData.Shift" required>
+                                <option value="">Select Shift</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            LPO : <input type="text" name="name" class="form-control" ng-model="formData.LPO" required="required" placeholder="LPO">
+                        </div>
+                        <div class="form-group">
+                            <input ng-hide="isProcessing" type="submit" name="submit" style="margin-left:0px;padding:4px 50px;" class="btn btn-common" value="Place Order">
+                            <a ng-show="isProcessing" class="btn btn-common"><i class="fa fa-sun-o fa-spin"></i> &nbsp; Authenticating...</a>
+                        </div>
+                        <div style="color:red;">{{error1}}</div>
+                        <div style="color:red;">{{error2}}</div>
+                    </form>
+                    <div ng-hide="newOrder">
+                        Your order has been placed. To place another order <a style="text-decoration:underline;cursor:pointer;" ng-click="newOrder=true;resetFormData();">Click here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

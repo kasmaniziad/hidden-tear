@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<style>
+    .fade {
+        -webkit-transition: opacity 2s; /* For Safari 3.1 to 6.0 */
+        transition: opacity 2s;
+        opacity: 0;
+    }
+</style>
+
+<div class="inmodal" ng-init="onInit()">
+    <div class="modal-header">
+        <h4 class="modal-title" data-ng-hide="isEdit">Add Preffered Location</h4>
+    </div>
+    <div class="form-horizontal">
+        <div class="modal-body">
+            <div id="map_canvas" style="height:500px; width: 100%"></div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-ng-click="cancel()">Close</button>
+        </div>
+    </div>
+</div>
+

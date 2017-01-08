@@ -1,0 +1,437 @@
+﻿
+<div class="row s4-notdlg" style="margin-top:-20px;">
+    <div class="col-md-12">
+        <div id="WOQOD-PageTitle">
+            <h1 style="padding-bottom:10px;" ng-hide="divIsBusy">
+                {{userInfo.CustomerNumber}} - {{userInfo.CustomerName}}
+            </h1>
+        </div>
+    </div>
+</div>
+
+<style>
+    .floatl {
+        float: left;
+    }
+
+    .divCaption {
+        background-color: #f1f1f1 !important;
+        padding: 10px !important;
+    }
+
+    .dayClass {
+        margin-bottom: 10px;
+    }
+
+    .custompadding {
+        padding: 10px !important;
+    }
+
+    .aligncenter {
+        text-align: center !important;
+    }
+
+    .alignmiddle {
+        vertical-align: middle !important;
+    }
+
+    .textboxClass {
+        background-color: transparent !important;
+        border: 0px !important;
+        width: 100%;
+        height: 100%;
+    }
+
+    .buttonClass {
+        margin-left: 0px !important;
+        padding: 4px 50px !important;
+        background-color: #274b90 !important;
+        color: white !important;
+        font-size: 15px !important;
+        font-weight: 600 !important;
+        height: 32px !important;
+    }
+
+    .orderNowButtonClass {
+        background-color: #274b90 !important;
+        color: white !important;
+        font-size: 13px !important;
+        line-height: 14px;
+        width: 87px !important;
+        text-align: center;
+        padding-left: 7px;
+        padding-top: 7px;
+    }
+
+    .changeOrderButtonClass {
+        background-color: #274b90 !important;
+        color: white !important;
+        font-size: 13px !important;
+        line-height: 14px;
+        width: 100px !important;
+        text-align: center;
+        padding-left: 7px;
+        padding-top: 7px;
+    }
+
+    progress[value]::-webkit-progress-bar {
+        background-color: #eee;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    }
+
+    progress[value]::-webkit-progress-value {
+        background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)), -webkit-linear-gradient(left, #09c, #f44);
+        border-radius: 2px;
+        background-size: 35px 20px, 100% 100%, 100% 100%;
+    }
+
+    .divStyle {
+        position: absolute;
+        width: 43%;
+        right: 16px;
+        margin-top: 20.5%;
+    }
+
+    .progress {
+        margin-bottom: 0px;
+        width: 100%;
+        height: 6px;
+        background-color: #033399;
+    }
+
+    /*.progress {
+        margin-bottom: 0px;
+        position: absolute;
+        width: 232px;
+        height: 6px;
+        margin-top: 91px;
+        margin-left: 204px;
+        background-color: red;
+    }*/
+
+
+    .progress-bar {
+        background-color: white;
+    }
+
+    .shadowDiv {
+        -webkit-box-shadow: 10px 8px 26px -4px rgba(209,201,209,1);
+        -moz-box-shadow: 10px 8px 26px -4px rgba(209,201,209,1);
+        box-shadow: 10px 8px 26px -4px rgba(209,201,209,1);
+        border-radius: 4px;
+    }
+
+    .headerclass {
+        color: #ffffff;
+        font-weight: bold;
+        padding: 5px 5px 2px 10px;
+        /* padding-left: 15px; */
+        font-size: 17px;
+        border-bottom: 1px solid;
+        border-color: #274b90;
+        background-color: #274b90;
+        border-radius: 5px;
+    }
+
+    .iconcolor {
+        color: white !important;
+    }
+
+    .creditlimitsize {
+        padding-bottom: 12px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .labelClass {
+        color: #274b90;
+        font-size: 23px;
+        font-weight: bold;
+    }
+
+    .labelValueClass {
+        font-size: 23px;
+    }
+
+    .iconNewStyle {
+        color: #009d59;
+    }
+
+    .customRowStyle {
+        margin-bottom: 20px;
+    }
+</style>
+
+<style>
+    .floatl {
+        float: left;
+    }
+
+    .divCaption {
+        background-color: #274b90 !important;
+        padding: 7px 0px 7px 10px !important;
+        color: white;
+    }
+
+    .dayClass {
+        margin-bottom: 10px;
+    }
+
+    .custompadding {
+        padding: 10px !important;
+    }
+
+    .aligncenter {
+        text-align: center !important;
+    }
+
+    .alignmiddle {
+        vertical-align: middle !important;
+    }
+
+    .textboxClass {
+        background-color: transparent !important;
+        border: 0px !important;
+        width: 100%;
+        height: 100%;
+    }
+
+    .buttonClass {
+        margin-left: 0px !important;
+        padding: 4px 50px !important;
+        background-color: #274b90 !important;
+        color: white !important;
+        font-size: 15px !important;
+        font-weight: 600 !important;
+        height: 32px !important;
+    }
+
+    .orderNowButtonClass {
+        background-color: #274b90 !important;
+        color: white !important;
+        font-size: 13px !important;
+        line-height: 14px;
+        width: 87px !important;
+        text-align: center;
+        padding-left: 7px;
+        padding-top: 7px;
+    }
+
+    .changeOrderButtonClass {
+        background-color: #274b90 !important;
+        color: white !important;
+        font-size: 13px !important;
+        line-height: 14px;
+        width: 100px !important;
+        text-align: center;
+        padding-left: 7px;
+        padding-top: 7px;
+    }
+
+    .cancelButtonClass {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    .selectclass {
+        background-color: white !important;
+        height: 28px;
+        border-color: transparent;
+    }
+
+    .datepickerClass {
+        background-color: white;
+        font-family: "Architype Renner W01 Regular","Univers Next W23" !important;
+        font-size: 20px !important;
+    }
+
+    .defaultpadding {
+        padding: 5px !important;
+    }
+
+    .defaulttextallignment {
+        text-align: left !important;
+    }
+
+    .icondefaultcolor {
+        color: white !important;
+    }
+
+    .greencolor {
+        color: green !important;
+    }
+
+    .orangecolor {
+        color: orange !important;
+    }
+
+    th {
+        font-weight: bold !important;
+    }
+
+    .divStyle {
+        position: absolute;
+        width: 43%;
+        right: 16px;
+        margin-top: 20.5%;
+    }
+
+    .progress {
+        margin-bottom: 0px;
+        width: 100%;
+        height: 6px;
+        background-color: #033399;
+    }
+
+    .progress-bar {
+        background-color: white;
+    }
+
+    .underConstructionClass {
+        font-size: 23px;
+        color: orange;
+    }
+
+    .divchart {
+        width: 10px;
+        height: 10px;
+        float: left;
+        background-color: #274b90;
+        margin-top: 5px;
+    }
+
+    .primarycolor {
+        color: #274b90 !important;
+    }
+
+    .defaultcaptions {
+        font-size: xx-large;
+        color: #009d59;
+        margin-bottom: 0px;
+    }
+</style>
+
+<div class="" style="min-height:703px;">
+    <div class="col-md-12 dayClass" ng-show="divIsBusy" style="position:absolute;width:100%;">
+        <div style="position:relative;width:50%;margin:200px auto;">
+            <div class="divStyle"></div>
+
+            <img style="width:100%;" src="@Url.Content("~/")images/Vehicle.png" />
+        </div>
+    </div>
+    <div class="row">
+        @*<div class="col-md-12" style="margin-bottom:20px;" ng-hide="divIsBusy">
+                <div class="row customRowStyle">
+                    <div class="col-md-12">
+                        <label class="labelClass"><i class="fa fa-envelope iconNewStyle">&nbsp;</i>Official Email : &nbsp;</label><label class="labelValueClass">{{userInfo.EmailId}}</label>
+                    </div>
+                </div>
+                <div class="row customRowStyle">
+                    <div class="col-md-6">
+                        <label class="labelClass"><i class="fa fa-user iconNewStyle">&nbsp;</i>Manager Name : &nbsp;</label><label class="labelValueClass">{{userInfo.UserName}}</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="labelClass"><i class="fa fa-mobile iconNewStyle">&nbsp;</i>Manager Mobile : &nbsp;</label><label class="labelValueClass">{{userInfo.MobileNo}}</label>
+                    </div>
+                </div>
+            </div>*@
+        <div class="col-md-12 dayClass" ng-hide="divIsBusy">
+            <div class="row">
+                <div class="col-md-6" style="padding-right:0px;">
+                    <div class="col-md-10">
+                        <h2 ng-hide="divIsBusy" class="defaultcaptions aligncenter">
+                            Credit Limit
+                        </h2>
+                        <canvas-gauge width="360" under-color="#EFEFEF" over-color="#274b90" value="60" mask="({0})%"
+                                      style="color: gray;"></canvas-gauge>
+                    </div>
+                    <div class="col-md-2" style="padding-left:0px;padding-top:56px;">
+                        <div class="row">
+                            <div class="divchart"></div><label>&nbsp; Used</label>
+                        </div>
+                        <div class="row">
+                            <div class="divchart" style="background-color:#efefef"></div> <label>&nbsp; Remaining</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-offset-1 col-md-5" style="padding-right:0px;">
+                    <h2 ng-hide="divIsBusy" class="defaultcaptions">
+                        Sites
+                    </h2>
+                    <div ng-repeat="project in lstUserData" style="padding-top:10px;">
+                        <div>
+                            <a ng-click="redirectto('placeorderwithsite', project.SiteId)" class="primarycolor" style="font-size:larger;font-weight:bold;cursor:pointer;">
+                                {{project.SiteNumber}} - {{project.SiteName}}
+                            </a>
+                            @*<blink>
+                                <span style="color:red;position:absolute;">
+                                    &nbsp;&nbsp; Order Now!
+                                </span>
+                            </blink>*@
+
+                        </div>
+                        <div>
+                            <label>Status : Active</label>
+                        </div>
+                        <div>
+                            <label>Last Delivered On : Oct-17-2016 </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 ng-hide="divIsBusy" class="defaultcaptions aligncenter" style="margin-bottom:2px;margin-top:10px;font-size:24px;">
+                        Recent Orders
+                    </h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="divCaption">Requested For</th>
+                                <th class="divCaption aligncenter">Project</th>
+                                <th class="divCaption aligncenter">Requested On</th>
+                                <th class="divCaption aligncenter">Requested By</th>
+                                <th class="divCaption aligncenter">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="order in $parent.dashboardOrders">
+                                <td class="aligncenter defaultpadding">
+                                    {{order.RequestedDate | date}}
+                                </td>
+                                <td class="aligncenter defaulttextallignment defaultpadding">
+                                    {{order.SiteName}}
+                                </td>
+                                <td class="aligncenter defaultpadding">
+                                    {{order.RequestedDate | date}}
+                                </td>
+                                <td class="aligncenter defaultpadding">
+                                    {{order.UserName}}
+                                </td>
+                                <td class="aligncenter defaultpadding">
+                                    <label ng-class="{'greencolor': order.IsExported == true, 'orangecolor' : order.IsExported == false}">{{order.IsExported == true ? 'Delivered' : 'Pending' }}</label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="aligncenter" style="padding-bottom:100px;" ng-hide="divIsBusy">
+            <input class="btn btn-common buttonClass" style="height:32px !important" type="button" ng-click="redirectto('placeorder')" value="Place New Order">
+            <br />
+            <br />
+            <label><b>For further assistance please contact +974 4021 7777 (Customer Service).</b></label>
+
+
+        </div>
+    </div>
+
+
+
+
+</div>

@@ -1,0 +1,44 @@
+﻿@using OnlineOrdering.REST
+@model Tuple<List<SiteInfo>, List<ShiftInfo>>
+<div ng-controller="homecontroller" ng-init="onInit()">
+    <link href="~/css/fullcalendar.css" rel="stylesheet" />
+    @Styles.Render("~/bundles/StylecalendarMySites")
+    @Scripts.Render("~/bundles/ScriptMySites")
+    <div class="row s4-notdlg pgeheading" style="margin-top:-80px;">
+        <div class="col-md-12">
+            <div id="WOQOD-PageTitle">
+                <h1>
+                    My Site(s)
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @{
+            foreach (var item in Model.Item1)
+            {
+                <h4 style="margin-left:20px;">
+                    @Html.Raw(item.SiteName)
+                </h4>
+                <br />
+                <div id='@string.Format("{0}{1}", "calendar", item.Id)' style="width:100%;margin-left:20px;"></div>
+
+                <div id='@string.Format("{0}{1}", "pagenotfount", item.Id)' style="width:100%;margin-left:20px;display:none; border:solid 1px #E0DADA;">
+                    <center style="padding:12px;">
+                        <h1 style="margin-bottom:0px;">No Data Found.</h1>
+                    </center>
+                </div>
+                <br />
+                <script>
+                    getcalendar(@item.Id);
+                </script>
+            }
+        }
+    </div>
+    <br />
+</div>
+<div id="idloading" style="margin-top:100px;display:none;">
+    <center>
+        <div class="loading">Loading&#8230;</div>
+    </center>
+</div>

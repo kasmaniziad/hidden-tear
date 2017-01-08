@@ -1,0 +1,24 @@
+﻿
+
+<style>
+    .modal {
+        top: 20% !important;
+    }
+
+    .modal-dialog {
+        width: 470px;
+        height: 200px;
+    }
+</style>
+<div>
+    <div style="padding:20px;text-align:center;">
+        <label style="font-size:22px;"><i style="color:green;" class="fa fa-check">&nbsp;</i>{{message1}} </label>
+        <label ng-show="message2 != null" style="font-size:20px;font-weight:bold;">"{{message2}}" </label>
+        <label ng-show="message3 != null" style="font-size:20px;margin-top:10px;">{{message3}} </label>
+        <br />
+        <button class="btn btn-common buttonClass" style="height:32px !important;" ng-click="cancel()">
+            <i></i>Done
+        </button>
+    </div>
+</div>
+
