@@ -1,0 +1,596 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en-US" style="height:100%;">
+<head>
+    <base href="/" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" />
+    <meta name="author" />
+    <link rel="icon" type="image/x-icon" href="@Url.Content("~")favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+
+    <style>
+        input[type=button], input[type=reset], input[type=submit], button {
+            min-width: 0em !important;
+            height: 27px !important;
+        }
+
+        #leftTabsCont .tabNode.active {
+            background: rgba(39,75,144,1);
+            color: #FFF;
+        }
+
+        .notificationstyle {
+            background-color: white;
+            position: absolute;
+            margin-top: 35px;
+            width: 300px;
+            margin-left: -215px;
+            border: 0.2px solid #efefef;
+            padding: 9px;
+            padding-bottom: 3px;
+        }
+
+        #triangle-up {
+            width: 10px;
+            height: 10px;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 11px solid #274b90;
+            position: absolute;
+            margin-top: -20px;
+            right: 22px;
+        }
+    </style>
+
+    <meta name="GENERATOR" content="Microsoft SharePoint" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Online Ordering</title>
+
+    <script type="text/javascript" src="Scripts/dependencies/jquery-2.1.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="_layouts/15/1033/styles/Themable/corev150a18.css?rev=ox%2BqLd6WTqhn6d%2FMqf2BMw%3D%3D" />
+    <link rel="stylesheet" type="text/css" href="_layouts/15/1033/styles/Themable/searchv1597ec.css?rev=qarmmE3eURu3ZS2Wsbpf2w%3D%3D" />
+    <link rel="stylesheet" type="text/css" href="_catalogs/masterpage/xPortal/style%20library/en-US/styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_catalogs/masterpage/xPortal/style%20library/common/Plugins/malihu/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="_catalogs/masterpage/xPortal/style%20library/en-US/styles/layout.min.css" />
+    <link rel="stylesheet" type="text/css" href="_catalogs/masterpage/xPortal/style%20library/en-US/styles/fonts_icons.min.css" />
+    <link rel="stylesheet" type="text/css" href="_catalogs/masterpage/xPortal/style%20library/en-US/styles/style_guide.min.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="_catalogs/masterpage/xPortal/style%20library/common/Plugins/ferroMenu/jquery.ferro.ferroMenu.css" />
+    <link rel="stylesheet" type="text/css" href="_catalogs/masterpage/xPortal/style%20library/en-US/styles/common.min.css" />
+    <link rel="stylesheet" type="text/css" href="_catalogs/masterpage/xPortal/style%20library/common/styles/common.min.css" />
+    <link rel="stylesheet" type="text/css" href="_catalogs/masterpage/xPortal/style%20library/en-US/styles/inners.min.css" />
+    <link rel="stylesheet" type="text/css" href="_catalogs/masterpage/xPortal/style%20library/en-US/styles/waq_media_queries.min.css" />
+    <link rel="stylesheet" href="css/angular-busy.css" />
+
+    <script type="text/javascript" src="_catalogs/masterpage/xPortal/style%20library/common/scripts/jquery.modernizr.min.js"></script>
+
+
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="libs/core-js/shim.min.js"></script>
+    <script src="libs/zone.js/zone.js"></script>
+    <script src="libs/reflect-metadata/Reflect.js"></script>
+    <script src="libs/systemjs/system.src.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script src="custom/system.config.js"></script>
+    <!--<script src="systemjs.config.js"></script>-->
+    <script>
+        System.import('app').catch(function (err) { console.error(err); });
+    </script>
+
+</head>
+<body style="height:100%;" class="pattern-1 color-1 mainBody" ng-cloak ng-app="woqodoo" ng-controller="maincontroller"  onhashchange="if (typeof(_spBodyOnHashChange) != 'undefined') _spBodyOnHashChange();">
+
+    <div id="s4-workspace">
+        <div id="s4-bodyContainer">
+
+            <span id="DeltaPlaceHolderMain">
+            </span>
+            <div id="mainMenuCont" class="transitionOpacity transitionZindex s4-notdlg">
+                <div class="mainMenuInnerCont pull-right">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-10 col-sm-offset-2 noindex">
+                                <div id="DeltaTopNavigation" class="ms-displayInline">
+                                    <a name="startNavigation">
+                                    </a>
+                                    <div id="zz1_TopNavigationMenu" class=" noindex ms-core-listMenu-horizontalBox">
+                                        <ul id="zz2_RootAspMenu" class="root ms-core-listMenu-root static">
+                                            <li class="static">
+                                                <a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href='#' accesskey="1"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">HOME</span></span></a><ul class="static">
+                                                    <li class="static dynamic-children selected">
+                                                        <a class="static dynamic-children selected menu-item ms-core-listMenu-item ms-displayInline ms-core-listMenu-selected ms-navedit-linkNode" tabindex="0" href="#"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children" ui-sref="aaboutus" data-target="#aaboutus"><span class="menu-item-text">About Us</span><span class="ms-hidden">Currently selected</span></span></a><ul class="dynamic">
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Vision, Mission &amp; Values</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Board Members</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Management Team</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Corporate Social Responsibility</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">QHSSE</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Investor Relations</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Careers</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" title="Branding Guidelines" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Branding Guidelines</span></span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="static dynamic-children">
+                                                        <a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Fuel &amp; Retail</span></span></a><ul class="dynamic">
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Bulk Fuels</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Service Stations</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Sidra Stores</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Auto Care Services</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Fuel Distribution</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Bunkering</span></span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="static dynamic-children">
+                                                        <a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Lubricants</span></span></a><ul class="dynamic">
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Products</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">OEM Approvals</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Distributors</span></span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Bitumen</span></span></a></li>
+                                                    <li class="static dynamic-children">
+                                                        <a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Gas</span></span></a><ul class="dynamic">
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">SHAFAF</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Commercial LPG</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Compressed Natural Gas</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Services</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">FAQs</span></span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="static dynamic-children">
+                                                        <a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">MEDIA CENTER</span></span></a><ul class="dynamic">
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">News &amp; Announcments</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Events</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Awareness Campaigns</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Promotions</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Media Contact</span></span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="static dynamic-children">
+                                                        <a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Business With WOQOD</span></span></a><ul class="dynamic">
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Our Business</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Tenders</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Rent a Shop</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Become a Retail Supplier</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Gas Contractors For LPG Tank Installation</span></span></a></li>
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Petrol Stations Equipment</span></span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="static dynamic-children">
+                                                        <a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Feedback</span></span></a><ul class="dynamic">
+                                                            <li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" ui-sref="acontactus" data-target="#acontactus" tabindex="0"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Contact Us</span></span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Site Map</span></span></a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container s4-notdlg noindex" style="height:195px;" id="WOQOD-Header">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div id="mainLogo">
+
+
+                            <a id="ctl00_logo_hyperlink_logo_sm" title="Home Page" class="innerLogo" href="#"><img title="Home Page" src="_catalogs/masterpage/xPortal/style%20library/common/images/assets/logo.png" alt="xPortal" /></a>
+                            <a id="ctl00_logo_hyperlink_logo_smm" title="Home Page" class="innerLogoOnMenu" href="#"><img title="Home Page" src="_catalogs/masterpage/xPortal/style%20library/common/images/assets/homeLogo.png" alt="xPortal" /></a>
+
+
+                        </div>
+                        <div id="logoBg">
+                        </div>
+                    </div>
+                    <div class="col-sm-10">
+                        <div id="mobileSocialAndLineCont" class="hide">
+                        </div>
+                        <div class="modal fade" id="hotLineMobModal" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            ×
+
+                                        </button>
+                                        <h4 class="modal-title">
+                                            <span id="ctl00_call_centerMobItitle" title="Call Center">Call Center</span>
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="callCenterCont">
+                                            <div class="lbl">
+                                                <span id="ctl00_call_centerMob" title="Call Center">Call Center</span>
+                                            </div>
+                                            <a class="number font24" href="tel:+974-40217777">
+                                                40217777
+
+
+                                            </a>
+                                        </div>
+                                        <div class="freeLineCont">
+                                            <div class="lbl">
+                                                <span id="ctl00_free_numberMob" title="Toll Number">Toll Number1</span>
+                                            </div>
+                                            <a class="number font24" href="tel:+974-800-3835">
+                                                800-3835
+                                            </a>
+                                        </div>
+                                        <div class="freeLineCont">
+                                            <div class="lbl">
+                                                <span itle="Toll Number">Toll Number2</span>
+                                            </div>
+                                            <a class="number font24" href="tel:+974-800-3835">
+                                                800-3835
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="secondryMenuCont" style="z-index:1">
+                            <div class="topRow noindex">
+                                <div class="userControl pull-right" id="langSwitcherCont" style="padding-left:0px; padding-right:0px;">
+
+                                    <a id="ctl00_AwarenessCont" title="Logout" class="userControl pull-right" href="@Url.Action("Logout","Login")">Logout</a>
+                                    <span class="sep">
+                                    </span>
+                                </div>
+
+                                <div class="secondryMenuItemCont pull-right">
+                                    <a id="ctl00_faqs" title="FAQs" ui-sref="faq" class="menuLink pull-right">FAQs</a>
+                                    <span class="sep">
+                                    </span>
+                                </div>
+                                <div class="secondryMenuItemCont pull-right">
+                                    <a id="ctl00_Contact_Us" title="Contact Us" class="menuLink pull-right" ui-sref="contactus" data-target="#acontactus">Contact Us</a>
+                                    <span class="sep">
+                                    </span>
+                                </div>
+                                <div class="secondryMenuItemCont pull-right">
+                                    <a id="ctl00_Notifications" title="Notifications" ng-click="hideNotification=!hideNotification" style="cursor:pointer;" class="colorGreen menuLink pull-right">Notifications</a>
+                                    <span class="sep">
+                                    </span>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="WOQOD-Content" style="margin-top:-45px;min-height:703px;">
+                <div class="row">
+                    <div class="col-sm-2 col-xs-12 s4-notdlg" style="margin-top:30px;">
+                        <div id="mainMenuBtn" class="boxShadow transitionAll">
+                            <a href="#">
+                                <div class="stripsCont">
+                                    <span class="strip strip1 transitionAll">
+                                    </span>
+                                    <span class="strip strip2 transitionOpacity">
+                                    </span>
+                                    <span class="strip strip3 transitionAll">
+                                    </span>
+                                </div>
+                                <span class="menuLbl">
+                                    <span id="ctl00_Menu" title="Menu">Menu</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div id="leftTabsCont">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="tabNode tabNode-1 pull-left boxShadow">
+                                    <a ui-sref="homemanage" data-target="#homemanage" class="tabLink">
+                                        <span class="iconBG">
+                                        </span>
+                                        <span title="Dashboard" class="tabLbl">Home</span>
+                                    </a>
+                                </li>
+
+                                <li role="presentation" style="background-color:#009D59;" class="tabNode tabNode-2 pull-left boxShadow">
+                                    <a ui-sref="order" class="tabLink">
+                                        <i class="fa fa-shopping-cart" style="color:white;font-size:40px;margin-top:14px;"></i>
+                                        <span id="ctl00_Innovation" title="Place Order" class="tabLbl" style="padding-top:8px;">Place Order</span>
+                                    </a>
+                                </li>
+                                <li role="presentation" class="tabNode tabNode-4 pull-left boxShadow">
+                                    <a ui-sref="changeorder" class="tabLink">
+                                        <i class="fa fa-edit" style="color:white;font-size:40px;margin-top:15px;"></i>
+                                        <span id="ctl00_Innovation" title="Change Order" class="tabLbl" style="padding-top:4px;">Change Order</span>
+                                    </a>
+                                </li>
+                                
+                                <li role="presentation" class="tabNode tabNode-5 pull-left boxShadow">
+                                    <a ui-sref="alldeliveries" class="tabLink">
+                                        <span class="iconBG">
+                                        </span>
+                                        <span id="ctl00_Innovation" title="Deliveries" class="tabLbl">Deliveries</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div id="leftMobileTabs" class="hide">
+                            <ul class="mobileItemsCont">
+                                <li class="tabNode-1" ui-sref="homemanage">
+                                    <a title="Home">
+                                        <span class="mobLbl">Home</span>
+                                        <span class="iconBG">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="tabNode-2" ui-sref="order">
+                                    <a title="Place Order">
+                                        <span class="mobLbl" style="line-height:0px;">Place Order</span>
+                                        <i class="fa fa-shopping-cart" style="color:white;font-size:40px;margin-top:18px;margin-left:22px;"></i>
+                                    </a>
+                                </li>
+                                <li class="tabNode-3" ui-sref="changeorder">
+                                    <a title="Reports">
+                                        <span class="mobLbl">Change Order</span>
+                                        <i class="fa fa-edit" style="color:white;font-size:40px;margin-top:20px;margin-left:30px;"></i>
+                                    </a>
+                                </li>
+                                <li class="tabNode-4" ui-sref="alldeliveries">
+                                    <a title="Frequently asked questions">
+                                        <span class="mobLbl">Deliveries</span>
+                                        <span class="iconBG">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="callCenterCont" class="boxShadow">
+                            <div class="callCenterCont">
+                                <div class="lbl">
+                                    <span id="ctl00_call_center" title="Call Center">Call Center</span>
+                                </div>
+                                <a class="number font24" href="tel:+974-40217777">
+                                    40217777
+                                </a>
+                            </div>
+                            <div class="freeLineCont">
+                                <div class="lbl">
+                                    <span id="ctl00_free_number" title="Toll Number">Toll Number</span>
+                                </div>
+                                <a class="number font24" href="tel:+974-800-3835">
+                                    800-FUEL
+                                </a>
+                                <a class="number font24" href="tel:+974-800-3835">
+                                    800-3835
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-10 col-xs-12">
+                        <div class="">
+                            <div>
+                                <my-app>Loading...</my-app>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                </div>
+            </div>
+            <div class="container s4-notdlg noindex" id="WOQOD-Subsidiaries">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="subsidiariesCont">
+                            <div class="rightBox">
+                                <div class="fakeTable">
+                                    <div class="fakeTableCell">
+
+                                        <a id="ctl00_hyperlink_logo_sm1" title="WOQOD International" class="logo1 logo" href="https://www.woqod.com.qa/"></a>
+                                        <a id="ctl00_hyperlink_logo_sm2" title="WOQOD Marine Services" class="logo2 logo" href="https://www.woqod.com.qa/net/eng/affiliates/affiliates.aspx?i=833"></a>
+                                        <a id="ctl00_hyperlink_logo_sm3" title="QJET" class="logo3 logo" href="http://www.qjetfuel.com/en/"></a>
+                                        <a id="ctl00_hyperlink_logo_sm4" title="WOQOD Vehicles inspection (fahes)" class="logo4 logo" href="http://www.fahes.com.qa/"></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer id="footer" class="noindex">
+                <div class="container">
+                    <div class="row">
+                        <div class="reusable_js">
+
+
+
+                            <div class="ms-webpart-chrome ms-webpart-chrome-fullWidth ">
+                                <div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ11" width="100%" class="ms-WPBody " OnlyForMePart="true" allowDelete="false" style="">
+                                    <div componentid="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d6_csr" id="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d6_csr"></div><noscript><div id="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d6_noscript">It looks like your browser does not have JavaScript enabled. Please turn on JavaScript and try again.</div></noscript><div id="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d6">
+                                        <div class="ms-webpart-chrome ms-webpart-chrome-fullWidth ">
+                                            <div class="ms-webpart-chrome-title" id="WebPartWPQ10_ChromeTitle">
+                                                <span title="" id="WebPartTitleWPQ10" class="js-webpart-titleCell"><h2 style="text-align:justify;" class="ms-webpart-titleText">&nbsp;<span></span><span id="WebPartCaptionWPQ10"></span></h2></span>
+                                            </div><div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ10" width="100%" class="ms-WPBody ms-WPBorder ms-wpContentDivSpace " OnlyForMePart="true" allowDelete="false" style="">
+                                                <div componentid="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d6_ctl00_csr" id="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d6_ctl00_csr"></div><noscript><div id="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d6_ctl00_noscript">It looks like your browser does not have JavaScript enabled. Please turn on JavaScript and try again.</div></noscript><div id="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d6_ctl00">
+
+                                                </div><div class="ms-clear"></div>
+                                            </div>
+                                        </div>
+
+                                    </div><div class="ms-clear"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                    <!--/ .row-->
+                    <div class="row">
+                        <div class="adjective clearfix">
+                            <div class="copyright">
+
+
+
+                                <div class="ms-webpart-chrome ms-webpart-chrome-fullWidth ">
+                                    <div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ13" width="100%" class="ms-WPBody " OnlyForMePart="true" allowDelete="false" style="">
+                                        <div componentid="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d72ar_csr" id="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d72ar_csr"></div><noscript><div id="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d72ar_noscript">It looks like your browser does not have JavaScript enabled. Please turn on JavaScript and try again.</div></noscript><div id="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d72ar">
+                                            <div class="ms-webpart-chrome ms-webpart-chrome-fullWidth ">
+                                                <div class="ms-webpart-chrome-title" id="WebPartWPQ12_ChromeTitle">
+                                                    <span title="" id="WebPartTitleWPQ12" class="js-webpart-titleCell"><h2 style="text-align:justify;" class="ms-webpart-titleText">&nbsp;<span></span><span id="WebPartCaptionWPQ12"></span></h2></span>
+                                                </div><div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ12" width="100%" class="ms-WPBody ms-WPBorder ms-wpContentDivSpace " OnlyForMePart="true" allowDelete="false" style="">
+                                                    <div componentid="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d72ar_ctl00_csr" id="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d72ar_ctl00_csr"></div><noscript><div id="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d72ar_ctl00_noscript">It looks like your browser does not have JavaScript enabled. Please turn on JavaScript and try again.</div></noscript><div id="ctl00_PlaceHolderFooter_g_283cde28_2ca8_46e8_9f80_dabf2c0e11d72ar_ctl00">
+
+                                                    </div><div class="ms-clear"></div>
+                                                </div>
+                                            </div>
+
+                                        </div><div class="ms-clear"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- markup filled by filters in filter pages -->
+            <div class="filters-bar">
+                <a>
+                    <span class="icon-filter">
+                    </span>
+                    Filters
+                </a>
+            </div>
+            <div class="responsive-filters">
+                <div class="filters-cntnr">
+                    <div class="close-filters">
+                        x
+
+                    </div>
+                    <h5>
+                        Refine
+                    </h5>
+                </div>
+            </div>
+
+        </div>
+
+
+        <span class="useless">
+            <style type="text/css">
+                body {
+                    overflow: auto !important;
+                }
+
+                    body.menuOn {
+                        overflow: hidden !important;
+                    }
+            </style>
+        </span>
+
+        <div class="clear">
+        </div>
+    </div>
+    <script src="_catalogs/masterpage/xPortal/style%20library/common/scripts/common.min.js" type="text/javascript">
+        //<![CDATA[
+
+
+        //]]></script>
+    <script src="_catalogs/masterpage/xPortal/style%20library/common/scripts/jquery.easing.1.3.min.js">
+        //<![CDATA[
+
+
+        //]]></script>
+    <script src="_catalogs/masterpage/xPortal/style%20library/common/scripts/jquery.fancybox.pack.min.js">
+        //<![CDATA[
+
+
+        //]]></script>
+    <script src="_catalogs/masterpage/xPortal/style%20library/common/scripts/jquery.cycle.all.min.js">
+        //<![CDATA[
+
+
+        //]]></script>
+    <script src="_catalogs/masterpage/xPortal/style%20library/common/scripts/bootstrap.min.js">
+        //<![CDATA[
+
+
+        //]]></script>
+    <!-- Scripts for news, events, products, media gallery -->
+    <!-- Home Page Scripts -->
+    <!-- Scripts for events, branches, contact us -->
+    <script src="_catalogs/masterpage/xPortal/style%20library/common/scripts/jquery.touchswipe.min.js">
+        //<![CDATA[
+
+
+        //]]></script>
+    <script src="_catalogs/masterpage/xPortal/style%20library/common/Plugins/dotdotdot/jquery.dotdotdot.min.js">
+        //<![CDATA[
+
+
+        //]]></script>
+    <script src="_catalogs/masterpage/xPortal/style%20library/common/Plugins/malihu/jquery.mCustomScrollbar.js">
+        //<![CDATA[
+
+
+        //]]></script>
+    <script src="_catalogs/masterpage/xPortal/style%20library/common/scripts/custom.js">
+        //<![CDATA[
+
+
+        //]]></script>
+    <script src="_catalogs/masterpage/xPortal/style%20library/common/scripts/xportal.min.js">
+        //<![CDATA[
+
+
+        //]]></script>
+    <!-- ferro menu form mobile-->
+    <script src="_catalogs/masterpage/xPortal/style%20library/common/Plugins/ferroMenu/jquery.ferro.ferroMenu-1.2.3.min.js" type="text/javascript">
+        //<![CDATA[
+
+
+        //]]></script>
+    <!-- zero width sharepoint -->
+    <script src="_catalogs/masterpage/xPortal/style%20library/common/Plugins/Generic/jQuery.stripZWSP-1.0.js" type="text/javascript">
+        //<![CDATA[
+
+
+        //]]></script>
+    <!-- WOQOD  JS-->
+    <script src="_catalogs/masterpage/xPortal/style%20library/common/Plugins/Generic/WOQOD.Home.js" type="text/javascript">
+        //<![CDATA[
+
+
+        //]]></script>
+
+    <style>
+        /* CSS Fallback from Modernizr */
+        .site-header.compat-object-fit {
+            background-size: cover;
+            background-position: center;
+        }
+
+            .site-header.compat-object-fit img {
+                opacity: 0;
+            }
+    </style>
+
+</body>
+</html>
