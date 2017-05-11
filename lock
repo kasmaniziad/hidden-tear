@@ -1,5 +1,0 @@
-lock
-SELECT TOP 1 @DNo = Nummer From Batch WITH (TABLOCKX, HOLDLOCK) 
-		
-		SELECT TOP 1 @ONo = Nummer From Batch WITH (TABLOCKX, HOLDLOCK)
-	
